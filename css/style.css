@@ -1,0 +1,119 @@
+body {
+    background-color: #262626;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.menu {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.menu-items__btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.menu-item__btn {
+    background: #9C9696;
+    border-radius: 20px;
+    width: 50px;
+    height: 50px;
+    transition: all .5s;
+    list-style: none;
+    border: none;
+    /* padding: 0 50px; */
+}
+
+.menu-item__btn+.menu-item__btn{
+    margin-left: 15px;
+}
+
+.menu-item__btn:hover {
+    background: linear-gradient(263.54deg, #280404 0.92%, #B31E1E 28.61%, #831515 51.36%, #530B0B 73.69%, #090000 90.42%);
+   
+    animation: 3s infinite alternate bg-btn;
+    width: 150px;
+    background-size:500%;
+    
+}
+.menu-item:active{
+    background: linear-gradient(263.54deg, #280404 0.92%, #B31E1E 28.61%, #831515 51.36%, #530B0B 73.69%, #090000 90.42%);
+    width: 150px;
+}
+
+.menu-link {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    
+
+}
+
+
+.menu-modal{
+    position: absolute;
+    background: #4e1212;
+    width: 500px;
+    height: 300px;
+    z-index: 123;
+    display: none;
+    transform: translateX(-50%);
+    transition: all .5s;
+    
+}
+.menu-modal.active{
+    display: block;
+}
+.menu-modal__text{
+    text-align: center;
+    padding-top: 100px;
+    color: #9C9696;
+    font-size: 40px;
+}
+.menu-modal__btn-wrap{
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.menu-modal__btn {
+    background: linear-gradient(263.54deg, #280404 0.92%, #B31E1E 28.61%, #831515 51.36%, #530B0B 73.69%, #090000 90.42%);
+    width: 150px;
+    border: 1px solid #2c2c2c;
+    border-radius: 20px;
+    
+    cursor: pointer;
+}
+.menu-modal__btn + .menu-modal__btn{
+    margin-left: 10px;
+}
+
+@keyframes bg-btn {
+    0% {
+        background-position: 80% 0%;
+       
+    }
+
+    50%{
+
+        background-position: 20% 100%;
+        /* background-position: 90deg; */
+    }
+    100%{
+
+        background-position: 86.66% 0.78%;
+        /* background-position: 90deg; */
+        
+    }
+}
